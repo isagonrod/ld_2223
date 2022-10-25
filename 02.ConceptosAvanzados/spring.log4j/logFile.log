@@ -1,0 +1,7 @@
+2022-10-25 14:35:20 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@180bc464: startup date [Tue Oct 25 14:35:20 CEST 2022]; root of context hierarchy
+2022-10-25 14:35:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [beans.xml]
+2022-10-25 14:35:21 INFO  Main:32 - Info message
+2022-10-25 14:35:21 TRACE Main:33 - Simple trace
+2022-10-25 14:35:21 DEBUG Main:34 - Debug message. 
+2022-10-25 14:35:21 ERROR Main:35 - Error message
+2022-10-25 14:35:21 FATAL Main:36 - Fatal error
