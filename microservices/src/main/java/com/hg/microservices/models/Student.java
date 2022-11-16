@@ -1,10 +1,14 @@
 package com.hg.microservices.models;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity(name = "Student")
 @Table(name = "\"Students\"", schema = "public")
+@OnDelete(action = OnDeleteAction.CASCADE)
 @PrimaryKeyJoinColumn(name = "id", foreignKey = @ForeignKey(name = "fk_student_person"))
 public class Student extends Person implements Serializable {
 
@@ -14,7 +18,7 @@ public class Student extends Person implements Serializable {
 	private Boolean schoolarship = false;
 
 	// State = 1: Inscrito, 2: Retirado, 3: Graduado, etc
-	@Column(name = "state", columnDefinition = "boolean DEFAULT '1'")
+	@Column(name = "state", columnDefinition = "integer DEFAULT '1'")
 	private Integer state = 1;
 
 	public Boolean getSchoolarship() {
