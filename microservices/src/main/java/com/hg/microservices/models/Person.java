@@ -1,12 +1,10 @@
 package com.hg.microservices.models;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity(name = "Person")
 @Table(name = "\"Persons\"", schema = "public")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Person {
 
 	@Id
